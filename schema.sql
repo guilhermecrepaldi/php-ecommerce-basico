@@ -1,0 +1,18 @@
+CREATE DATABASE ecommerce;
+USE ecommerce;
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    slug VARCHAR(200) NOT NULL UNIQUE,
+    price DECIMAL(10,2) NOT NULL,
+    description TEXT,
+    active TINYINT DEFAULT 1,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    total DECIMAL(10,2) NOT NULL,
+    status VARCHAR(50) DEFAULT 'pendente',
+    items JSON,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
