@@ -162,3 +162,4 @@
 2022-12-20 11:09|Implementa validação de formulários
 2022-12-20 11:16|Adiciona README com instruções de setup
 2022-09-12 10:06|Corrige cálculo de totais
+2022-09-12 10:45|Corrige problema de encoding UTF-8
